@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diamond Parks - Corporate Team Outings & Events</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#00b4d8", secondary: "#ffd60a" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      @keyframes wave {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      .animate-wave {
+        animation: wave 15s linear infinite;
+      }
+      .animate-bounce-slow {
+        animation: bounce 2s ease-in-out infinite;
+      }
+      .animate-slide-in {
+        animation: slideIn 0.5s ease-out forwards;
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.05);
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style="
+        background-image: url('https://res.cloudinary.com/djcs3o9pi/image/upload/v1758263896/org_c7e77f638a2eaedd_1682509006000_fak55e.jpg');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-primary/50 to-transparent"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-primary/20 to-transparent animate-wave"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30"
+      ></div>
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          <!-- Hero Content -->
+          <div class="flex-1 text-center lg:text-left text-white">
+            <h1
+              class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 animate-float"
+            >
+              Bring Your Team Together: Waves, Laughter & Thrilling Adventures
+            </h1>
+            <p
+              class="text-lg sm:text-xl lg:text-2xl mb-8 opacity-90 max-w-2xl animate-bounce-slow"
+            >
+              The perfect balance of adventure and relaxation for stronger bonds
+              and lasting memories.
+            </p>
+            <button
+              class="bg-primary hover:bg-primary/90 text-white px-8 py-4 !rounded-button text-lg font-semibold transition-colors whitespace-nowrap lg:hidden"
+            >
+              Plan Your Team Outing
+            </button>
+          </div>
+          <!-- Lead Form - Desktop Right, Mobile Below -->
+          <div class="w-full lg:w-96 bg-white rounded-xl shadow-2xl p-6 lg:p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Get Your Quote Now!
+            </h3>
+            <form class="space-y-4">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Company Name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Company Email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                  required
+                />
+              </div>
+              <div>
+                <select
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm pr-8 appearance-none bg-white"
+                >
+                  <option>Team Size</option>
+                  <option>0-50 employees</option>
+                  <option>50-200 employees</option>
+                  <option>200-500 employees</option>
+                  <option>500+ employees</option>
+                </select>
+              </div>
+
+              <div>
+                <select
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm pr-8 appearance-none bg-white"
+                >
+                  <option>Preferred Month</option>
+                  <option>January 2025</option>
+                  <option>February 2025</option>
+                  <option>March 2025</option>
+                  <option>April 2025</option>
+                  <option>May 2025</option>
+                  <option>June 2025</option>
+                </select>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary hover:bg-primary/90 text-white py-3 !rounded-button font-semibold transition-colors whitespace-nowrap"
+              >
+                SUBMIT
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why Diamond Parks Section -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 lg:mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            Why Diamond Parks Is the Perfect Choice for Corporate Outings
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            We specialize in creating memorable corporate experiences that
+            strengthen teams, boost morale, and deliver exceptional value for
+            your investment.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-equalizer-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              Flexible & Customised Packages
+            </h3>
+            <p class="text-gray-600">
+              Whether you’re bringing 20 colleagues or 500+, we have the spaces
+              and packages to fit your needs, budget, and timing. Choose the
+              right mix of rides, activities, meeting rooms, food, and downtime
+              to create your perfect outing.
+            </p>
+          </div>
+          <div
+            class="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-team-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Team Bonding Focus</h3>
+            <p class="text-gray-600">
+              Our rides, games, and group activities are designed to break
+              barriers, build trust, and boost collaboration. Teams return with
+              stronger bonds, renewed energy, and improved communication.
+            </p>
+          </div>
+          <div
+            class="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-hand-heart-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              End-to-End Support - We Handle Everything
+            </h3>
+            <p class="text-gray-600">
+              Planning an outing doesn’t have to be stressful. From creating the
+              schedule and arranging food to transport and on-site support, we
+              take care of every detail.
+            </p>
+          </div>
+          <div
+            class="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-shield-user-line text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              High Safety Standards & Certified Support Staff
+            </h3>
+            <p class="text-gray-600">
+              Every activity follows strict safety standards. Trained staff,
+              lifeguards, first-aid facilities, clean changing rooms, and proper
+              hygiene, so your team can relax and enjoy with peace of mind.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Facilities Section -->
+    <section class="py-16 lg:py-24 bg-white relative overflow-hidden">
+      <!-- <div
+        class="absolute inset-0 bg-[url('https://readdy.ai/api/search-image?query=Modern%20luxury%20resort%20facilities%20with%20swimming%20pools%2C%20water%20features%2C%20and%20elegant%20outdoor%20spaces%2C%20soft%20focus%20background%20perfect%20for%20overlaying%20content%2C%20high-end%20amenities%20visible%20but%20blurred%2C%20professional%20architectural%20photography&width=1920&height=1080&seq=facilities&orientation=landscape')] bg-cover bg-center opacity-5"
+      ></div> -->
+      <!-- <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover opacity-50"
+      >
+        <source
+          src="assets/0_Life_Preservers_Red_And_White_3840x2160.mp4"
+          type="video/mp4"
+        />
+      </video> -->
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center mb-12 lg:mb-16">
+          <h2
+            class="text-3xl lg:text-4xl font-bold text-black-900 mb-4 animate-float"
+          >
+            Facilities & Features for Corporate Outings
+          </h2>
+          <p class="text-lg text-black-600 max-w-3xl mx-auto">
+            Everything your team needs for work, play, and bonding - all in one
+            place.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Meeting & Events -->
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer overflow-hidden"
+          >
+            <div class="p-6 space-y-4">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+                >
+                  <i class="ri-presentation-line text-primary text-xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Meeting & Conference Rooms
+                </h3>
+              </div>
+              <div class="space-y-3 pl-16">
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>
+                    Ideal for sessions, presentations & award ceremonies</span
+                  >
+                </p>
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Equipped with AV</span>
+                </p>
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Seating and shade </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dining & Refreshments -->
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer overflow-hidden"
+          >
+            <div class="p-6 space-y-4">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+                >
+                  <i class="ri-restaurant-line text-primary text-xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Food & Dining Options
+                </h3>
+              </div>
+              <div class="space-y-3 pl-16">
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Multi-cuisine meals</span>
+                </p>
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Vegetarian & non-veg choices</span>
+                </p>
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Dietary accommodations available</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technology -->
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer overflow-hidden"
+          >
+            <div class="p-6 space-y-4">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+                >
+                  <i class="ri-wifi-line text-primary text-xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900">Technology</h3>
+              </div>
+              <div class="space-y-3 pl-16">
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>High-speed connectivity across the venue</span>
+                </p>
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Sound Systems</span>
+                </p>
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Charging points & device-friendly setups</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Support Services -->
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer overflow-hidden"
+          >
+            <div class="p-6 space-y-4">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+                >
+                  <i class="ri-customer-service-line text-primary text-xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Support Services
+                </h3>
+              </div>
+              <div class="space-y-3 pl-16">
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Certified staff & lifeguards</span>
+                </p>
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span> Safety gear & hygiene protocols</span>
+                </p>
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span> On-site medical support</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transportation -->
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer overflow-hidden"
+          >
+            <div class="p-6 space-y-4">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+                >
+                  <i class="ri-bus-line text-primary text-xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Transportation
+                </h3>
+              </div>
+              <div class="space-y-3 pl-16">
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Optional shuttle services from major hubs</span>
+                </p>
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Parking Facilities</span>
+                </p>
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Valet Service</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recreation -->
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer overflow-hidden"
+          >
+            <div class="p-6 space-y-4">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+                >
+                  <i class="ri-hotel-bed-line text-primary text-xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Rest & Relax Zones
+                </h3>
+              </div>
+              <div class="space-y-3 pl-16">
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Comfortable lounge areas</span>
+                </p>
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Shady lawns & seating</span>
+                </p>
+                <p class="flex items-center gap-2 text-gray-600">
+                  <i class="ri-checkbox-circle-line text-primary"></i>
+                  <span>Changing rooms & relaxation spots</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <!-- <button
+            class="bg-primary hover:bg-primary/90 text-white px-8 py-4 !rounded-button text-lg font-semibold transition-all transform hover:scale-105 whitespace-nowrap inline-flex items-center gap-2 group"
+          >
+            <span>Explore All Facilities</span>
+            <i
+              class="ri-arrow-right-line transition-transform group-hover:translate-x-1"
+            ></i>
+          </button> -->
+        </div>
+      </div>
+    </section>
+    <!-- Social Proof Section -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 animate-float"
+          >
+            Plan Your Team Outing Now!
+          </h2>
+          <p class="text-lg text-gray-600 animate-bounce-slow">
+            Join these awesome companies who turned their corporate events into
+            unforgettable water adventures!
+          </p>
+        </div>
+        <!-- Client Logos -->
+        <div
+          class="flex flex-wrap justify-center items-center gap-8 lg:gap-12 mb-16 opacity-60"
+        >
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_25,w_400,h_226,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Wipro_c7a5a55f"
+              alt="Wipro"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_131,w_600,h_338,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Capgemini_bb7ed852"
+              alt="Capgemini"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_39,y_0,w_1173,h_661,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/BNY_404cf13f"
+              alt="BNY"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_156,w_3000,h_1688,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Microsoft_027998be"
+              alt="Microsoft"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_152,w_768,h_433,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Whirpool_0b6cae24"
+              alt="Whirpool"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_23,w_562,h_316,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Zudio_101594db"
+              alt="zudio"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_1,y_0,w_3838,h_2160,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Ritz_Carlton_5f7b49ac"
+              alt="Ritz"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_45,w_225,h_127,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/JW_Marriot_7f4faa44"
+              alt="JW_Marriot_7f4faa44"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_6,w_1400,h_788,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Corinthians_2f39cb65"
+              alt="Corinthians_2f39cb65"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_39,w_180,h_102,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Orbett_854bb104"
+              alt="Orbett_854bb104"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_152,w_768,h_433,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Whirpool_0b6cae24"
+              alt="Whirpool"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_67,y_0,w_1067,h_600,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Reliance_ae07229d"
+              alt="Reliance_ae07229d"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_67,y_0,w_1066,h_600,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Varroc_Engg._0c9e1943"
+              alt="Varroc_Engg"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_0,w_993,h_559,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Citybank_d16d53f7"
+              alt="Citi"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_47,w_900,h_506,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/HDFCBank_8c22673b"
+              alt="HDFCBank_8c22673b"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_201,w_920,h_518,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/ICICI_15c8a78d"
+              alt="ICICI_15c8a78d"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_12,y_0,w_290,h_163,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Spicer_parts_46cd0540"
+              alt="Spicer_parts_46cd0540"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_131,w_600,h_338,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/LG_774f7571"
+              alt="lg"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_49,w_224,h_126,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Microcool_e2347045"
+              alt="Microcool_e2347045"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_551,y_0,w_298,h_168,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/ITC_(1)_cd206d58"
+              alt="ITC_"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_60,w_735,h_413,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/M&M_39c2c4bf"
+              alt="mahindra"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_6,w_1400,h_788,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Hyosung_(2)_259e23d2"
+              alt="Hyosung_"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_197,w_900,h_506,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/GKN_b5771ef5"
+              alt="GKN_b5771ef5"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_16,w_300,h_168,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Gabriel_0735bbc4"
+              alt="Gabriel_0735bbc4"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_49,w_225,h_127,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Torrent_pharma_e95ab4bb"
+              alt="Torrent_pharma_e95ab4bb"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_20,w_266,h_150,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Mahle_af162b8f"
+              alt="Mahle_af162b8f"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_12,w_1399,h_789,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/3A_Composits_a3a54913"
+              alt="ITC_"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_112,w_512,h_288,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Agrostar_33e579f6"
+              alt="ITC_"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_75,w_800,h_450,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Vogue_ad92fa27"
+              alt="ITC_"
+              class="h-12 object-contain"
+            />
+          </div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_44,w_200,h_112,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/Two_Brothers_9fc2c8e3"
+              alt="ITC_"
+              class="h-12 object-contain"
+            />
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-3"
+              >
+                <span class="text-white font-semibold">SM</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Sudeshna</h4>
+                <p class="text-sm text-gray-600">Orbett Hotels</p>
+                <div class="flex items-center mt-1 text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-line"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-700 italic">
+              "Wonderful experience, cooperative staff, and exclusive rides — my
+              team enjoyed it a lot. These are very precious memories for us.
+              It’s been an awesome experience, and we’d all love to visit
+              Diamond Park again."
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-3"
+              >
+                <span class="text-white font-semibold">AS</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Anjali Shinde</h4>
+                <p class="text-sm text-gray-600">Courtyard & Marriot</p>
+                <div class="flex items-center mt-1 text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-line"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-700 italic">
+              "The park delivered an outstanding experience from start to
+              finish. Adventure activities were not only thrilling but also
+              impressively well-maintained. The restaurant served tasty, quality
+              food that pleasantly surprised us. A fantastic place for both fun
+              and relaxation!"
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-3"
+              >
+                <span class="text-white font-semibold">RC</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900">Raju Chauhan</h4>
+                <p class="text-sm text-gray-600">TKFL Industies Pvt. Ltd.</p>
+                <div class="flex items-center mt-1 text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-line"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-700 italic">
+              "The overall staff behaviour at the park was polite and helpful,
+              making the experience pleasant. The adventure park activities were
+              well-maintained and safe, adding to the fun. Everything was
+              organised and enjoyable. A great place for a fun day out!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Activity Gallery -->
+    <section class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 lg:mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            Experience Team Building at Its Best
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Discover the variety of activities and experiences that make Diamond
+            Parks the perfect venue for corporate team events.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div
+            class="aspect-square rounded-xl overflow-hidden shadow-sm card-hover"
+          >
+            <img
+              src="https://res.cloudinary.com/djcs3o9pi/image/upload/v1758264690/_SID1049_el5xim.jpg"
+              alt="Water Slide Adventure"
+              class="w-full h-full object-cover object-top hover-scale"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-square rounded-xl overflow-hidden shadow-sm card-hover"
+          >
+            <img
+              src="https://res.cloudinary.com/djcs3o9pi/image/upload/v1758264824/_SID7666_1_psfoaq.jpg"
+              alt="Wave Pool Fun"
+              class="w-full h-full object-cover object-top hover-scale"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-square rounded-xl overflow-hidden shadow-sm card-hover"
+          >
+            <img
+              src="https://res.cloudinary.com/djcs3o9pi/image/upload/v1758264915/DSC_1313_1_jojzff.jpg"
+              alt="Cabana Relaxation"
+              class="w-full h-full object-cover object-top hover-scale"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-square rounded-xl overflow-hidden shadow-sm card-hover"
+          >
+            <img
+              src="https://res.cloudinary.com/djcs3o9pi/image/upload/v1758263917/DJI_0225_irqlpq.jpg"
+              alt="Pool Volleyball"
+              class="w-full h-full object-cover object-top hover-scale"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-square rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="https://res.cloudinary.com/djcs3o9pi/image/upload/v1758265034/1_1_r3ojvm.jpg"
+              alt="Workshop Session"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-square rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop/q_80,w_900,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/DSCF2243_o0nu4g?_gl=1*srwld9*_ga*MjE1MTQxOTMuMTc1ODI2MjY4Nw..*_ga_DMYPKC176S*czE3NTgyOTY2MDYkbzYkZzEkdDE3NTgyOTY2MjgkajM4JGwwJGgw"
+              alt="Team Lunch"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-square rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="https://res.cloudinary.com/djcs3o9pi/image/upload/v1758263895/DJI_0275_tkw0th.jpg"
+              alt="Strategic Planning"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-square rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3327/x_0,y_257,w_5000,h_2813,r_0,c_crop/q_80,w_900,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/DSC_6673?_gl=1*1m7nz2k*_ga*MjE1MTQxOTMuMTc1ODI2MjY4Nw..*_ga_DMYPKC176S*czE3NTgyOTY2MDYkbzYkZzEkdDE3NTgyOTY2MjgkajM4JGwwJGgw"
+              alt="Recreational Games"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-square rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="https://res.cloudinary.com/djcs3o9pi/image/upload/v1758263900/DSC_7718_lbrzxy.jpg"
+              alt="Team Celebration"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-square rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3327/x_0,y_257,w_5000,h_2813,r_0,c_crop/q_80,w_900,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/DSC_5561?_gl=1*smaj9d*_ga*MjE1MTQxOTMuMTc1ODI2MjY4Nw..*_ga_DMYPKC176S*czE3NTgyOTY2MDYkbzYkZzEkdDE3NTgyOTY2MjgkajM4JGwwJGgw"
+              alt="Networking Session"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-square rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/w_5000,h_3130/x_0,y_159,w_5000,h_2812,r_0,c_crop/q_80,w_900,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/5_ynpkuh?_gl=1*6flj5n*_ga*MjE1MTQxOTMuMTc1ODI2MjY4Nw..*_ga_DMYPKC176S*czE3NTgyOTY2MDYkbzYkZzEkdDE3NTgyOTY3NzQkajYwJGwwJGgw"
+              alt="Leadership Workshop"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="aspect-square rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          >
+            <img
+              src="https://assets.simplotel.com/simplotel/image/upload/x_0,y_358,w_3824,h_2150,r_0,c_crop/q_80,w_900,dpr_1,f_auto,fl_progressive,c_limit/diamond-parks-pune/2_uq7fp1?_gl=1*6flj5n*_ga*MjE1MTQxOTMuMTc1ODI2MjY4Nw..*_ga_DMYPKC176S*czE3NTgyOTY2MDYkbzYkZzEkdDE3NTgyOTY3NzQkajYwJGwwJGgw"
+              alt="Leadership Workshop"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 lg:mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-lg text-gray-600">
+            Get answers to common questions about planning your corporate team
+            outing
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-white rounded-xl shadow-sm">
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle"
+            >
+              <span class="font-semibold text-gray-900"
+                >What is the minimum/maximum group size you accept?</span
+              >
+              <i
+                class="ri-add-line text-xl text-gray-500 transition-transform"
+              ></i>
+            </button>
+            <div class="px-6 pb-4 hidden faq-content">
+              <p class="text-gray-600">
+                We welcome groups as small as 10 people and can comfortably host
+                up to 500+ participants - packages scale to suit your team size.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm">
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle"
+            >
+              <span class="font-semibold text-gray-900"
+                >Can the itinerary be customised?
+              </span>
+              <i
+                class="ri-add-line text-xl text-gray-500 transition-transform"
+              ></i>
+            </button>
+            <div class="px-6 pb-4 hidden faq-content">
+              <p class="text-gray-600">
+                Yes! You can mix & match water rides, adventure activities, team
+                games, meeting time, and food options. Our team helps you design
+                the ideal schedule for your goals and budget.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm">
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle"
+            >
+              <span class="font-semibold text-gray-900"
+                >What are the safety measures in place?
+              </span>
+              <i
+                class="ri-add-line text-xl text-gray-500 transition-transform"
+              ></i>
+            </button>
+            <div class="px-6 pb-4 hidden faq-content">
+              <p class="text-gray-600">
+                Your team’s safety is our top priority. We have certified staff,
+                lifeguards, first-aid facilities, safety gear, and emergency
+                protocols in place. Insurance options are also available.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm">
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle"
+            >
+              <span class="font-semibold text-gray-900"
+                >How far in advance do we need to book?
+              </span>
+              <i
+                class="ri-add-line text-xl text-gray-500 transition-transform"
+              ></i>
+            </button>
+            <div class="px-6 pb-4 hidden faq-content">
+              <p class="text-gray-600">
+                For small groups, booking 2–3 weeks in advance works. For larger
+                teams or peak season, we recommend reserving at least 1–2 months
+                ahead.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm">
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle"
+            >
+              <span class="font-semibold text-gray-900"
+                >Is transport included in the packages?</span
+              >
+              <i
+                class="ri-add-line text-xl text-gray-500 transition-transform"
+              ></i>
+            </button>
+            <div class="px-6 pb-4 hidden faq-content">
+              <p class="text-gray-600">
+                Yes, we can arrange shuttle buses or vans depending on your team
+                size and pickup location. Transport costs are tailored to your
+                quote.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm">
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle"
+            >
+              <span class="font-semibold text-gray-900"
+                >Do you provide work-friendly facilities?
+              </span>
+              <i
+                class="ri-add-line text-xl text-gray-500 transition-transform"
+              ></i>
+            </button>
+            <div class="px-6 pb-4 hidden faq-content">
+              <p class="text-gray-600">
+                Yes. We offer meeting rooms, Wi-Fi, AV equipment, and breakout
+                zones, allowing you to seamlessly balance work with play.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm">
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle"
+            >
+              <span class="font-semibold text-gray-900"
+                >What happens in case of rain or bad weather?
+              </span>
+              <i
+                class="ri-add-line text-xl text-gray-500 transition-transform"
+              ></i>
+            </button>
+            <div class="px-6 pb-4 hidden faq-content">
+              <p class="text-gray-600">
+                The fun doesn’t stop! Many activities are weather-friendly, and
+                we have indoor spaces and backup plans for uninterrupted
+                enjoyment.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm">
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle"
+            >
+              <span class="font-semibold text-gray-900"
+                >How clean and safe are the restaurants?
+              </span>
+              <i
+                class="ri-add-line text-xl text-gray-500 transition-transform"
+              ></i>
+            </button>
+            <div class="px-6 pb-4 hidden faq-content">
+              <p class="text-gray-600">
+                Our restaurants and food courts follow strict hygiene protocols,
+                and all staff are trained to provide safe, clean service for
+                every guest.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm">
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle"
+            >
+              <span class="font-semibold text-gray-900"
+                >Do you provide corporate packages or bulk discounts?
+              </span>
+              <i
+                class="ri-add-line text-xl text-gray-500 transition-transform"
+              ></i>
+            </button>
+            <div class="px-6 pb-4 hidden faq-content">
+              <p class="text-gray-600">
+                Yes, we offer special corporate rates and group discounts based
+                on team size and inclusions.
+              </p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-sm">
+            <button
+              class="w-full px-6 py-4 text-left flex justify-between items-center faq-toggle"
+            >
+              <span class="font-semibold text-gray-900"
+                >Is unlimited food and beverages available?</span
+              >
+              <i
+                class="ri-add-line text-xl text-gray-500 transition-transform"
+              ></i>
+            </button>
+            <div class="px-6 pb-4 hidden faq-content">
+              <p class="text-gray-600">
+                We offer corporate packages with unlimited meals, snacks, and
+                beverages, making it simple for HRs to plan without hidden
+                costs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Final CTA Section -->
+    <section class="relative py-20 lg:py-32">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source
+          src="https://res.cloudinary.com/djcs3o9pi/video/upload/v1758263942/0_Life_Preservers_Red_And_White_3840x2160_bbzdij.mp4"
+          type="video/mp4"
+        />
+      </video>
+      >
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div
+        class="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8"
+      >
+        <h2 class="text-3xl lg:text-5xl font-bold text-white mb-6">
+          Plan Your Perfect Team Day
+        </h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Turn your corporate outing into a memorable, fun-filled experience.
+          From thrilling rides and engaging team activities to delectable meals
+          and serene relaxation zones, we handle every detail to ensure a
+          seamless event.
+        </p>
+        <button
+          class="bg-primary hover:bg-primary/90 text-white px-8 py-4 !rounded-button text-lg font-semibold transition-colors whitespace-nowrap popup-trigger"
+        >
+          Plan Your Perfect Team Day
+        </button>
+      </div>
+    </section>
+    <!-- Sticky CTA Bar (Mobile) -->
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-t border-gray-200 p-4 z-50 lg:hidden"
+    >
+      <button
+        class="w-full bg-primary hover:bg-primary/90 text-white py-3 !rounded-button font-semibold transition-all transform hover:scale-105 whitespace-nowrap popup-trigger flex items-center justify-center gap-2"
+      >
+        <i class="ri-water-flash-line animate-bounce-slow"></i>
+        Plan Your Perfect Team Day
+        <i class="ri-water-flash-line animate-bounce-slow"></i>
+      </button>
+    </div>
+    <!-- Popup Modal -->
+    <div
+      id="popup-modal"
+      class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-xl shadow-2xl w-full max-w-md mx-auto">
+        <div
+          class="flex justify-between items-center p-6 border-b border-gray-200"
+        >
+          <h3 class="text-xl font-bold text-gray-900">Plan Your Team Outing</h3>
+          <button
+            id="close-popup"
+            class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100"
+          >
+            <i class="ri-close-line text-xl text-gray-500"></i>
+          </button>
+        </div>
+        <form class="p-6 space-y-4">
+          <div>
+            <input
+              type="text"
+              placeholder="Full Name"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Company Name"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+            />
+          </div>
+          <div>
+            <select
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm pr-8 appearance-none bg-white"
+            >
+              <option>Team Size</option>
+              <option>0-50 employees</option>
+              <option>50-200 employees</option>
+              <option>200-500 employees</option>
+              <option>500+ employees</option>
+            </select>
+          </div>
+          <div>
+            <input
+              type="email"
+              placeholder="Company Email"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+            />
+          </div>
+          <div>
+            <select
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm pr-8 appearance-none bg-white"
+            >
+              <option>Preferred Month</option>
+              <option>January 2025</option>
+              <option>February 2025</option>
+              <option>March 2025</option>
+              <option>April 2025</option>
+              <option>May 2025</option>
+              <option>June 2025</option>
+            </select>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-primary hover:bg-primary/90 text-white py-3 !rounded-button font-semibold transition-colors whitespace-nowrap"
+          >
+            Get My Custom Quote
+          </button>
+        </form>
+      </div>
+    </div>
+    <script id="faq-functionality">
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqToggles = document.querySelectorAll(".faq-toggle");
+        faqToggles.forEach((toggle) => {
+          toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector("i");
+            if (content.classList.contains("hidden")) {
+              content.classList.remove("hidden");
+              icon.classList.remove("ri-add-line");
+              icon.classList.add("ri-subtract-line");
+            } else {
+              content.classList.add("hidden");
+              icon.classList.remove("ri-subtract-line");
+              icon.classList.add("ri-add-line");
+            }
+          });
+        });
+      });
+    </script>
+    <script id="popup-functionality">
+      document.addEventListener("DOMContentLoaded", function () {
+        const popupModal = document.getElementById("popup-modal");
+        const popupTriggers = document.querySelectorAll(".popup-trigger");
+        const closePopup = document.getElementById("close-popup");
+        popupTriggers.forEach((trigger) => {
+          trigger.addEventListener("click", function () {
+            popupModal.classList.remove("hidden");
+            popupModal.classList.add("flex");
+          });
+        });
+        closePopup.addEventListener("click", function () {
+          popupModal.classList.add("hidden");
+          popupModal.classList.remove("flex");
+        });
+        popupModal.addEventListener("click", function (e) {
+          if (e.target === popupModal) {
+            popupModal.classList.add("hidden");
+            popupModal.classList.remove("flex");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
